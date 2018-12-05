@@ -20,12 +20,9 @@ app.listen(3000, function (a) {
 // });
 
 function insert(screenshot) {
-
-    Jimp.read('public/image/Frame.PNG')
-
+    Jimp.read('public/image/frame.PNG')
         .then(image => {
-            image.clone()
-
+            return image
                 .composite(screenshot, 320, 580)
                 .write('public/image/full.jpg')
         })
@@ -82,12 +79,54 @@ app.post("/api/Upload", function (req, res) {
             err ? console.log('logo err' + err) : console.log('image processed');
             return img.scale(2.5);
         });
-        Jimp.read('public/image/Frame.PNG')
+        insert(screen); 
+        setTimeout(function(){
+            action = true;
+            res.redirect('/');
+        }, 3000);
+        
+    });
+});
 
+app.post("/api/Upload1", function (req, res) {
+    upload(req, res, function (err) {
+        if (err) {
+            return res.end("Something went wrong!");
+        }
+        var screen = new Jimp('public/image/screen1.PNG', function (err, img) {
+            err ? console.log('logo err' + err) : console.log('image processed');
+            return img.scale(2.5);
+        });
+        Jimp.read('public/image/frameWhite.jpeg')
         .then(image => {
-            image.clone()
+            return image
+                .composite(screen, 320, 570)
+                .write('public/image/full.jpg')
+        })
+        .catch(err => {
+            console.error(err);
+        });
+        setTimeout(function(){
+            action = true;
+            res.redirect('/');
+        }, 3000);
+        
+    });
+});
 
-                .composite(screen, 320, 580)
+app.post("/api/Upload2", function (req, res) {
+    upload(req, res, function (err) {
+        if (err) {
+            return res.end("Something went wrong!");
+        }
+        var screen = new Jimp('public/image/screen1.PNG', function (err, img) {
+            err ? console.log('logo err' + err) : console.log('image processed');
+            return img.scale(2.5);
+        });
+        Jimp.read('public/image/frameGold.jpeg')
+        .then(image => {
+            return image
+                .composite(screen, 320, 570)
                 .write('public/image/full.jpg')
         })
         .catch(err => {

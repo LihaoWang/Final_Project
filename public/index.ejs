@@ -45,16 +45,28 @@
 
 <body>
     <!-- As a link -->
-    <nav class="navbar navbar-dark bg-primary mb-4">
+    <nav class="navbar navbar-dark bg-dark mb-4">
         <a class="navbar-brand" href="#">Screenly</a>
     </nav>
-    <div class="d-flex justify-content-center">
         <form id="frmUploader" enctype="multipart/form-data" action="api/Upload/" method="post">
-            <input type="file" name="imgUploader" multiple />
-            <input type="submit" name="submit" id="btnSubmit" value="Upload" />
+            <div class="d-flex justify-content-center">
+            <input class="btn btn-outline-dark" type="file" name="imgUploader" multiple />
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+            <input class="btn btn-dark" type="submit" name="submit" id="btnSubmit" value="iPhone 7 (Black)" />
+            </div>
         </form>
-    </div>
-    <div class="d-flex justify-content-center mt-5">
+        <div class="d-flex justify-content-center mt-2">
+        <form id="frmUploader" enctype="multipart/form-data" action="api/Upload1/" method="post">
+            <input class="btn btn-light" type="submit" name="submit" id="btnSubmit" value="iPhone 7 (Silver)" />
+        </form>
+        </div>
+        <div class="d-flex justify-content-center mt-2">
+                <form id="frmUploader" enctype="multipart/form-data" action="api/Upload2/" method="post">
+                    <input class="btn btn-warning" type="submit" name="submit" id="btnSubmit" value="iPhone 7 (Gold)" />
+                </form>
+                </div>
+    <div class="d-flex justify-content-center mt-3">
         <% if (action == true){ %>
         <img id="screenshot" src="image/full.jpg" width="30%" height="30%">
         <% } %>
