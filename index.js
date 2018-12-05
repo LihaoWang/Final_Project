@@ -79,7 +79,7 @@ app.post("/api/Upload", function (req, res) {
             return res.end("Something went wrong!");
         }
         var screen = new Jimp('public/image/screen1.PNG', function (err, img) {
-            err ? console.log('logo err' + err) : console.log('logo created and ready for use');
+            err ? console.log('logo err' + err) : console.log('image processed');
             return img.scale(2.5);
         });
         Jimp.read('public/image/Frame.PNG')
