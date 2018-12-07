@@ -1,4 +1,4 @@
-# Final_Project
+# Screenly: Create beautiful screenshots
 
 ## Usage
 ```
