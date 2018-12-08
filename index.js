@@ -12,9 +12,9 @@ app.use(Express.static('public'));
 app.use(bodyParser.json());
 app.set('views', __dirname + '/public')
 app.set('view engine', 'ejs')
-
+var port = process.env.PORT || 8080;
 //set up listen port
-app.listen(3000, function (a) {
+app.listen(port, function () {
     console.log("Listening to port 3000");
 });
 
