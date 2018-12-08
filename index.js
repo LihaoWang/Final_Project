@@ -1,5 +1,5 @@
 //set up npm packages
-const Jimp = require('Jimp')
+const Jimp = require('jimp')
 const fs = require('fs')
 var Express = require('express');
 var multer = require('multer');
