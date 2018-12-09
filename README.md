@@ -12,3 +12,6 @@ Go to localhost:3000/welcome
 
 ## Deployment
 [Heroku Link](https://screenly-app.herokuapp.com/welcome)
+
+## Limitations
+The upload screenshot name is hardcoded to 'screen1.PNG'. So only screenshot with this exact name will be processed.
