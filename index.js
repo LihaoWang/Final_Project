@@ -15,7 +15,7 @@ app.set('view engine', 'ejs')
 var port = process.env.PORT || 8080;
 //set up listen port
 app.listen(port, function () {
-    console.log("Listening to port 3000");
+    console.log("Listening to port 3000"+port);
 });
 
 //the function of generating screenshot with frame
@@ -39,7 +39,7 @@ var Storage = multer.diskStorage({
         callback(null, "public/image");
     },
     filename: function (req, file, callback) {
-        callback(null, "screen1.PNG");
+        callback(null, file.originalname);
     }
 });
 
