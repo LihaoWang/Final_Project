@@ -3,7 +3,7 @@
 ## Usage
 ```
 node index.js
-Go to localhost:3000/welcome
+Go to localhost:8080/welcome
 ```
 
 1. upload a screenshot of your phone (16:9 aspect ratio)
