@@ -10,8 +10,5 @@ Go to localhost:8080/welcome
 2. choose the color you want
 3. your framed screenshot will be generated automatically
 
-## Deployment
-[Heroku Link](https://screenly-app.herokuapp.com/welcome)
-
 ## Limitations
 The upload screenshot name is hardcoded to 'screen1.PNG'. So only screenshot with this exact name will be processed.
